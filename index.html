@@ -181,17 +181,17 @@
 </section>
 </section>
 <section class="tab-panel" id="update-panel" role="tabpanel" aria-labelledby="update-tab" tabindex="0">
-<section id="update"><h2>有新版手冊時，怎麼更新？</h2><div class="panel"><ol><li>依團隊使用的 GitHub 同步方式，取得已審查的新版檔案。若電腦上的檔案自己改過，先請維護人員協助保留，不直接覆蓋。</li><li>重新開啟新版 <code>index.html</code>。如果先前另存過一份，請確認開啟的是這次更新的檔案。</li><li>請工具設定人員確認：AI 工具中的技能是否也已更新。手冊更新了，不代表工具內的技能也跟著更新。</li><li>開始新的對話，再確認需要的技能可以使用。</li></ol>
+<section id="update"><h2>有新版手冊時，怎麼更新？</h2><div class="panel"><ol><li>線上手冊會顯示已發佈的最新版；若你另存離線副本，請重新下載新版 <code>index.html</code>。</li><li>技能若有新版，至「安裝與更新」頁籤依 Claude 或 Codex 的步驟更新；手冊更新不會自動更新工具中的技能。</li><li>完成後開始新對話；若仍看不到新版技能，重新啟動工具。</li></ol>
 <details><summary>給維護人員：版本同步與手冊維護</summary><p>確認本庫沒有未處理的本機修改後，使用 <code>git pull --ff-only</code> 同步。複製安裝的技能須另行比對、備份並更新；如使用工具支援的 symlink，應連到已審查版本。</p><p>SKILL.md 是操作規範正本；此手冊為人工維護的使用說明。技能名稱、適用情境、搭配技能、所需資料、成果、檢查項目或操作授權改動時，同步更新手冊、README 與必要交接紀錄。維持台灣繁體中文與非技術同仁能理解的文字，技術細節放入管理人員說明。新增或移除技能時同步導覽與情境表；檢查原始文件連結、本機開啟、搜尋分類與指令複製功能。</p></details></div></section>
 <section id="install"><h2>免寫程式安裝技能</h2>
 <div class="notice"><strong>先確認 GitHub 讀取權限。</strong>本手冊網址公開，完整技能內容仍在私有的 <code>NETCOM2025/PW-Skills</code> repo。安裝者的 GitHub 帳號必須有該 repo 的讀取權限；這不會公開原始碼，也不會授予網站操作權限。</div>
-<div class="panel"><h3>Claude：圖形介面安裝</h3><ol>
+<div class="panel"><h3>Claude：圖形介面安裝與更新</h3><ol>
 <li>在 Claude 網頁版或桌面版，打開「Customize（自訂）」→「Plugins（外掛）」→「Add（新增）」→「Add marketplace（新增市集）」。</li>
 <li>輸入公開手冊 repo：<code>NETCOM2025/PW-Skills-Handbook</code>。找到「PW-Skills 團隊技能」後，按「Add」安裝。</li>
 <li>若畫面要求連結 GitHub，登入有 <code>NETCOM2025/PW-Skills</code> 讀取權限的帳號，並同意 Claude GitHub App 讀取這個私有 repo。</li>
 <li>開始新對話，在輸入框輸入「/」選擇技能，或直接描述工作。安裝於同一 Claude 帳號後，可在 Claude、Cowork 與 Claude Code 使用。</li>
-</ol><p>如果找不到 Plugins，或看見沒有權限的訊息，請聯絡 AI 工具管理人員確認組織設定及 repo 讀取權限。此安裝包只有技能說明，不包含 MCP 連線。</p><p class="subtle">官方說明：<a href="https://claude.com/docs/plugins/overview">Claude 外掛安裝與 GitHub 授權</a>。</p></div>
-<div class="panel"><h3>Codex：貼上安裝請求</h3><p>在 Codex 桌面版的本機工作階段或 CLI 開啟新對話，按下方按鈕複製文字，再貼上送出。Codex 會使用內建的 <code>$skill-installer</code> 安裝六個技能；若同名技能已存在，先比對並詢問你，不會直接覆蓋。這是安裝到個人電腦的 Codex，雲端工作階段需另行設定。</p>
+</ol><h4>之後更新</h4><ol><li>打開「Customize → Plugins」，選擇「PW-Skills 團隊技能」，按「Check for updates」。</li><li>若此 GitHub 市集提供「Sync automatically」，可開啟；市集同步到新版本後，技能會隨來源更新。</li><li>若使用 Claude Code，執行 <code>/plugin</code>，到「Marketplaces」選擇此市集並開啟「Enable auto-update」；也可選擇「Update marketplace」立即更新。更新中的對話若尚未載入新版，重新載入外掛或開新對話。</li></ol><p>如果找不到 Plugins，或看見沒有權限的訊息，請聯絡 AI 工具管理人員確認組織設定及 repo 讀取權限。此安裝包只有技能說明，不包含 MCP 連線。</p><p class="subtle">官方說明：<a href="https://claude.com/docs/plugins/overview">Claude 外掛安裝與更新</a>、<a href="https://code.claude.com/docs/en/plugins/install">Claude Code 外掛更新</a>。</p></div>
+<div class="panel"><h3>Codex：貼上安裝請求</h3><p>在 Codex 桌面版的本機工作階段或 CLI 開啟新對話，按下方按鈕複製文字，再貼上送出。這是安裝到個人電腦的 Codex，雲端工作階段需另行設定。已安裝的技能會略過；要更新既有技能，請使用下方的更新請求。</p>
 <pre class="prompt" id="prompt-codex-install" tabindex="0" aria-label="Codex 安裝團隊技能的請求">請使用 Codex 內建的 $skill-installer，從 GitHub 私有 repo NETCOM2025/PW-Skills 安裝下列六個技能。請依 repo 預設分支讀取每個完整資料夾：
 skills/translation-zh-cn/portwell-cn-b2b-translation
 skills/translation-zh-cn/portwell-cn-solution-translation
@@ -201,9 +201,25 @@ skills/wordpress/wp-plugin-update
 skills/wordpress/wp-pgp-mail-test
 
 安裝到我的個人 Codex skills。若目前無法讀取私有 repo，請停止並告訴我需要先取得 GitHub repo 讀取權限；不要要求我貼上或輸出任何存取 token。
-如果同名技能已存在，先比對差異並等我確認後才覆蓋。完成後列出安裝結果，以及是否需要重新開啟 Codex。</pre>
+先檢查這六個名稱是否已安裝在我的個人 skills 位置。只對尚未安裝的技能使用 $skill-installer，且每個技能分開安裝；不要對已存在的名稱執行安裝器，因為它會停止而且不會更新。若六個都已安裝，請告訴我改用更新請求。完成後列出已安裝、略過或失敗的技能，以及是否需要重新開啟 Codex。</pre>
 <div class="actions" id="install-actions" hidden><button class="copy" id="copy-install-prompt" type="button">複製 Codex 安裝請求</button><button class="select" id="select-install-prompt" type="button">選取文字</button></div><p class="status" id="install-status" aria-live="polite"></p>
 <p class="subtle">Codex 的內建安裝器支援從其他 repo 下載技能；私有 repo 仍需你本人的 GitHub 讀取權限。<a href="https://learn.chatgpt.com/docs/build-skills">Codex 官方技能安裝說明</a>。</p></div>
+<div class="panel"><h3>Codex：更新已安裝技能</h3><p>技能不會隨手冊自動更新。每次要取得最新版時，在 Codex 本機對話中複製並送出下方請求；Codex 會先比對來源與本機版本，有自行修改的檔案時會停下來詢問，不會直接覆蓋。來源仍須有私有 repo 讀取權限。</p>
+<pre class="prompt" id="prompt-codex-update" tabindex="0" aria-label="Codex 更新團隊技能的請求">請更新我已安裝的 PW-Skills 團隊技能。從 GitHub 私有 repo NETCOM2025/PW-Skills 的預設分支取得最新版，使用我現有的 GitHub 登入或 Git 權限；若無法讀取就停止，不要要求我貼上或輸出任何存取 token。
+
+只處理下列六個技能：
+skills/translation-zh-cn/portwell-cn-b2b-translation
+skills/translation-zh-cn/portwell-cn-solution-translation
+skills/translation-zh-cn/portwell-cn-article-import
+skills/wordpress/wp-takeover
+skills/wordpress/wp-plugin-update
+skills/wordpress/wp-pgp-mail-test
+
+先確認 Codex 的個人技能位置（CODEX_HOME/skills；未設定 CODEX_HOME 時通常是 ~/.codex/skills；如未找到，再檢查 ~/.agents/skills），只比對上述同名技能。先列出安裝路徑與差異，不要使用 $skill-installer 更新，因為它遇到已存在的同名資料夾會停止。
+
+若發現同一技能裝在多個位置、技能資料夾不是本 repo 安裝的，或有本機新增／修改內容，先停下來列出情況並詢問我，不要覆蓋或刪除。若差異只有 repo 已審查的新版本，先將要更新的完整資料夾備份到我的使用者目錄下 PW-Skills-backup，建立以目前日期時間命名的子資料夾，再以來源完整資料夾更新相同技能；不要改動其他技能，也不要安裝原本不存在的技能。最後列出更新的技能、安裝位置、來源 commit、備份位置，以及是否需要重新開啟 Codex。</pre>
+<div class="actions" id="update-actions" hidden><button class="copy" id="copy-update-prompt" type="button">複製 Codex 更新請求</button><button class="select" id="select-update-prompt" type="button">選取文字</button></div><p class="status" id="update-status" aria-live="polite"></p>
+<p class="subtle">Codex 會在偵測不到已安裝技能或私有 repo 權限不足時停止。若更新後技能沒有出現在清單中，請重新開啟 Codex。</p></div>
 </section>
 </section>
 <section class="tab-panel" id="sources-panel" role="tabpanel" aria-labelledby="sources-tab" tabindex="0">
@@ -377,6 +393,24 @@ document.getElementById('copy-install-prompt').addEventListener('click', async (
 document.getElementById('select-install-prompt').addEventListener('click', () => {
   selectPrompt(installPrompt);
   installStatus.textContent = '已選取文字，請按 Ctrl+C（Mac：⌘C），或使用系統的複製選單。';
+});
+const updateActions = document.getElementById('update-actions');
+const updatePrompt = document.getElementById('prompt-codex-update');
+const updateStatus = document.getElementById('update-status');
+updateActions.hidden = false;
+document.getElementById('copy-update-prompt').addEventListener('click', async () => {
+  try {
+    if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('Clipboard unavailable');
+    await navigator.clipboard.writeText(updatePrompt.textContent);
+    updateStatus.textContent = '已複製。請貼到 Codex 新對話並送出。';
+  } catch {
+    selectPrompt(updatePrompt);
+    updateStatus.textContent = '瀏覽器無法自動複製；已選取文字，請按 Ctrl+C（Mac：⌘C），或使用系統的複製選單。';
+  }
+});
+document.getElementById('select-update-prompt').addEventListener('click', () => {
+  selectPrompt(updatePrompt);
+  updateStatus.textContent = '已選取文字，請按 Ctrl+C（Mac：⌘C），或使用系統的複製選單。';
 });
 showHashTarget();
 </script></body></html>
