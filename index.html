@@ -19,7 +19,7 @@
 @media print{#main-tabs,#skill-tabs{display:none!important}.tab-panel{display:block!important}}
 </style></head>
 <body><a class="skip" href="#main">跳到主要內容</a>
-<header><div class="wrap"><div class="eyebrow">PW-SKILLS · 數位行銷部使用手冊</div><h1>找到合適的技能，讓 AI 協助工作。</h1><p>給數位行銷部同仁的工作指引。從翻譯文案到網站問題處理，選擇你要做的工作、準備資料，再複製範例交給 AI。</p><div>離線可讀 · 不需伺服器 · 摘要核對日期：2026-10-06 · 外掛更新指引補充：2026-10-15</div></div></header>
+<header><div class="wrap"><div class="eyebrow">PW-SKILLS · 數位行銷部使用手冊</div><h1>找到合適的技能，讓 AI 協助工作。</h1><p>給數位行銷部同仁的工作指引。從翻譯文案到網站問題處理，選擇你要做的工作、準備資料，再複製範例交給 AI。</p><div>離線可讀 · 不需伺服器 · 摘要核對日期：2026-10-06 · 外掛更新指引補充：2026-10-15 · 免程式安裝補充：2026-10-15</div></div></header>
 <div class="wrap layout"><nav id="main-tabs" class="tab-list main-tabs" role="tablist" aria-label="手冊主頁籤" aria-orientation="horizontal">
 <a href="#guide-panel" role="tab" id="guide-tab" aria-controls="guide-panel" aria-selected="true">快速開始</a>
 <a href="#skills-panel" role="tab" id="skills-tab" aria-controls="skills-panel" aria-selected="false">技能說明</a>
@@ -32,7 +32,7 @@
 <div class="notice"><strong>技能（skill）是一份給 AI 的工作規範。</strong><br>它告訴 AI 如何處理特定工作、檢查哪些項目，以及哪些操作要先取得同意。你可以用一般文字交代需求，不需要寫程式。</div>
 <div class="panel"><ol>
 <li><strong>先閱讀。</strong>取得團隊提供的檔案後，雙擊 <code>index.html</code> 就能用瀏覽器閱讀，不需要連上網路。若要開啟附帶的原始文件，需一併取得整個資料夾。</li>
-<li><strong>第一次使用，先完成工具設定。</strong>請負責 AI 工具設定的同仁，協助把需要的技能加入 Codex 或 Claude Code。讀過這份手冊，不代表 AI 已經可以使用技能。</li>
+<li><strong>第一次使用，先安裝技能。</strong>請至「安裝與更新」頁籤的<a href="#install">免寫程式安裝方式</a>，依你使用的工具操作。讀過手冊不代表 AI 已經載入技能。</li>
 <li><strong>開始新的對話，確認技能可用。</strong>請設定人員確認所選技能與需要搭配的技能都已載入。不確定時先確認，不要把「AI 說可以幫忙」當作設定完成。</li>
 <li><strong>找出符合工作的範例。</strong>按下「複製工作指令」，把［你的資料］補齊，再貼到已設定好的 AI 工具。可以補充用途、時程與要保留的內容。</li>
 <li><strong>先審閱成果，再決定網站操作。</strong>需要修改網站時，請依部門與目標網站的既有規定確認範圍。不要在聊天中貼密碼、金鑰或客戶資料。</li>
@@ -40,7 +40,7 @@
 <details><summary>給工具設定人員：安裝方式與資料夾位置</summary>
 <p>依 <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/README.md">README 的安裝說明與防覆蓋範例</a>，複製完整技能資料夾，包含附帶檔案。來源為 <code>skills/&lt;category&gt;/&lt;skill-name&gt;/</code>，安裝目的地不含分類層。既有同名資料夾或連結須先比對與備份。</p>
 <div class="table-wrap"><table><caption>本庫 README 列出的安裝位置</caption><thead><tr><th scope="col">工具</th><th scope="col">供這台電腦的使用者使用</th><th scope="col">只在指定專案使用</th></tr></thead><tbody><tr><th scope="row">Codex</th><td><code>~/.agents/skills/&lt;skill-name&gt;/</code></td><td><code>&lt;project&gt;/.agents/skills/&lt;skill-name&gt;/</code></td></tr><tr><th scope="row">Claude Code</th><td><code>~/.claude/skills/&lt;skill-name&gt;/</code></td><td><code>&lt;project&gt;/.claude/skills/&lt;skill-name&gt;/</code></td></tr></tbody></table></div>
-<p>一般檔案複製可用於 macOS／Linux／Windows。不需另裝 plugin 或 MCP server；網站操作所需的工具與權限仍由目標專案準備。安裝後開新對話並確認載入。</p></details></div></section>
+<p>一般檔案複製可用於 macOS／Linux／Windows，不需 MCP server；Claude 圖形介面安裝會使用僅含技能的外掛市集。無論採哪種方式，都須有私有 repo 讀取權限；網站操作所需工具與權限仍由目標專案準備。安裝後開新對話並確認載入。</p></details></div></section>
 <section id="choose"><h2>你現在想做什麼？</h2><div class="panel table-wrap"><table><thead><tr><th scope="col">這次要做什麼</th><th scope="col">選用技能</th></tr></thead><tbody><tr><td>將英文行銷內容翻成簡體中文，或更新既有草稿</td><td><a href="#portwell-cn-b2b-translation">英文內容翻譯</a></td></tr><tr><td>翻譯既有解決方案頁面與文章卡片</td><td><a href="#portwell-cn-solution-translation">解決方案頁面翻譯</a> ＋ 英文內容翻譯</td></tr><tr><td>將國際站文章新增到中國站</td><td><a href="#portwell-cn-article-import">新增文章</a> ＋ 英文內容翻譯</td></tr><tr><td>接手網站、規劃搬遷，或網站畫面異常</td><td><a href="#wp-takeover">網站現況盤點</a></td></tr><tr><td>安排網站外掛更新，並確認重要頁面與功能</td><td><a href="#wp-plugin-update">外掛更新</a> ＋ 網站現況盤點</td></tr><tr><td>表單通知收不到、解密亂碼，或圖片連結有問題</td><td><a href="#wp-pgp-mail-test">加密郵件檢查</a></td></tr></tbody></table></div>
 <noscript><p>互動功能未啟用時，所有內容仍會顯示；頁籤可作為頁內索引，工作指令可手動選取複製。</p></noscript></section>
 </section>
@@ -183,6 +183,28 @@
 <section class="tab-panel" id="update-panel" role="tabpanel" aria-labelledby="update-tab" tabindex="0">
 <section id="update"><h2>有新版手冊時，怎麼更新？</h2><div class="panel"><ol><li>依團隊使用的 GitHub 同步方式，取得已審查的新版檔案。若電腦上的檔案自己改過，先請維護人員協助保留，不直接覆蓋。</li><li>重新開啟新版 <code>index.html</code>。如果先前另存過一份，請確認開啟的是這次更新的檔案。</li><li>請工具設定人員確認：AI 工具中的技能是否也已更新。手冊更新了，不代表工具內的技能也跟著更新。</li><li>開始新的對話，再確認需要的技能可以使用。</li></ol>
 <details><summary>給維護人員：版本同步與手冊維護</summary><p>確認本庫沒有未處理的本機修改後，使用 <code>git pull --ff-only</code> 同步。複製安裝的技能須另行比對、備份並更新；如使用工具支援的 symlink，應連到已審查版本。</p><p>SKILL.md 是操作規範正本；此手冊為人工維護的使用說明。技能名稱、適用情境、搭配技能、所需資料、成果、檢查項目或操作授權改動時，同步更新手冊、README 與必要交接紀錄。維持台灣繁體中文與非技術同仁能理解的文字，技術細節放入管理人員說明。新增或移除技能時同步導覽與情境表；檢查原始文件連結、本機開啟、搜尋分類與指令複製功能。</p></details></div></section>
+<section id="install"><h2>免寫程式安裝技能</h2>
+<div class="notice"><strong>先確認 GitHub 讀取權限。</strong>本手冊網址公開，完整技能內容仍在私有的 <code>NETCOM2025/PW-Skills</code> repo。安裝者的 GitHub 帳號必須有該 repo 的讀取權限；這不會公開原始碼，也不會授予網站操作權限。</div>
+<div class="panel"><h3>Claude：圖形介面安裝</h3><ol>
+<li>在 Claude 網頁版或桌面版，打開「Customize（自訂）」→「Plugins（外掛）」→「Add（新增）」→「Add marketplace（新增市集）」。</li>
+<li>輸入公開手冊 repo：<code>NETCOM2025/PW-Skills-Handbook</code>。找到「PW-Skills 團隊技能」後，按「Add」安裝。</li>
+<li>若畫面要求連結 GitHub，登入有 <code>NETCOM2025/PW-Skills</code> 讀取權限的帳號，並同意 Claude GitHub App 讀取這個私有 repo。</li>
+<li>開始新對話，在輸入框輸入「/」選擇技能，或直接描述工作。安裝於同一 Claude 帳號後，可在 Claude、Cowork 與 Claude Code 使用。</li>
+</ol><p>如果找不到 Plugins，或看見沒有權限的訊息，請聯絡 AI 工具管理人員確認組織設定及 repo 讀取權限。此安裝包只有技能說明，不包含 MCP 連線。</p><p class="subtle">官方說明：<a href="https://claude.com/docs/plugins/overview">Claude 外掛安裝與 GitHub 授權</a>。</p></div>
+<div class="panel"><h3>Codex：貼上安裝請求</h3><p>在 Codex 桌面版的本機工作階段或 CLI 開啟新對話，按下方按鈕複製文字，再貼上送出。Codex 會使用內建的 <code>$skill-installer</code> 安裝六個技能；若同名技能已存在，先比對並詢問你，不會直接覆蓋。這是安裝到個人電腦的 Codex，雲端工作階段需另行設定。</p>
+<pre class="prompt" id="prompt-codex-install" tabindex="0" aria-label="Codex 安裝團隊技能的請求">請使用 Codex 內建的 $skill-installer，從 GitHub 私有 repo NETCOM2025/PW-Skills 安裝下列六個技能。請依 repo 預設分支讀取每個完整資料夾：
+skills/translation-zh-cn/portwell-cn-b2b-translation
+skills/translation-zh-cn/portwell-cn-solution-translation
+skills/translation-zh-cn/portwell-cn-article-import
+skills/wordpress/wp-takeover
+skills/wordpress/wp-plugin-update
+skills/wordpress/wp-pgp-mail-test
+
+安裝到我的個人 Codex skills。若目前無法讀取私有 repo，請停止並告訴我需要先取得 GitHub repo 讀取權限；不要要求我貼上或輸出任何存取 token。
+如果同名技能已存在，先比對差異並等我確認後才覆蓋。完成後列出安裝結果，以及是否需要重新開啟 Codex。</pre>
+<div class="actions" id="install-actions" hidden><button class="copy" id="copy-install-prompt" type="button">複製 Codex 安裝請求</button><button class="select" id="select-install-prompt" type="button">選取文字</button></div><p class="status" id="install-status" aria-live="polite"></p>
+<p class="subtle">Codex 的內建安裝器支援從其他 repo 下載技能；私有 repo 仍需你本人的 GitHub 讀取權限。<a href="https://learn.chatgpt.com/docs/build-skills">Codex 官方技能安裝說明</a>。</p></div>
+</section>
 </section>
 <section class="tab-panel" id="sources-panel" role="tabpanel" aria-labelledby="sources-tab" tabindex="0">
 <section id="sources"><h2>需要進一步協助時</h2><p>使用方式與工作範圍，請找部門的技能維護窗口；工具設定、網站權限與備份，請找 AI 工具設定人員或網站管理人員。正式網站是客戶與外部讀者正在使用的網站，修改前請確認影響範圍。</p><p>這份手冊整理自六份技能原始說明。它的檢查範圍是本機閱讀與操作功能，不代表每位同仁都已取得網站權限，也不代表所有流程都已在正式網站測試。</p><details><summary>給維護人員：原始文件與交接紀錄</summary><p><a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/README.md">安裝與維護說明</a> · <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/docs/inventory.md">技能來源盤點</a> · <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/docs/handoff.md">交接紀錄</a> · <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/AGENTS.md">本庫維護規則</a></p><p>完整技術步驟以對應 SKILL.md 與目標專案規則為準；不把歷史案例當成目前網站的診斷結果，也不修改同仁的既有技能安裝副本。</p></details></section>
@@ -284,7 +306,7 @@ function showHashTarget() {
   const sectionToTab = {
     'guide-panel': 'guide-tab', start: 'guide-tab', choose: 'guide-tab',
     'skills-panel': 'skills-tab', skills: 'skills-tab',
-    'update-panel': 'update-tab', update: 'update-tab',
+    'update-panel': 'update-tab', update: 'update-tab', install: 'update-tab',
     'sources-panel': 'sources-tab', sources: 'sources-tab'
   };
   const tab = mainTabs.find(item => item.id === sectionToTab[id]);
@@ -337,6 +359,24 @@ cards.forEach(card => {
     selectPrompt(document.getElementById(event.currentTarget.dataset.prompt));
     status.textContent = '已選取文字，請按 Ctrl+C（Mac：⌘C），或使用系統的複製選單。';
   });
+});
+const installActions = document.getElementById('install-actions');
+const installPrompt = document.getElementById('prompt-codex-install');
+const installStatus = document.getElementById('install-status');
+installActions.hidden = false;
+document.getElementById('copy-install-prompt').addEventListener('click', async () => {
+  try {
+    if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('Clipboard unavailable');
+    await navigator.clipboard.writeText(installPrompt.textContent);
+    installStatus.textContent = '已複製。請貼到 Codex 新對話並送出。';
+  } catch {
+    selectPrompt(installPrompt);
+    installStatus.textContent = '瀏覽器無法自動複製；已選取文字，請按 Ctrl+C（Mac：⌘C），或使用系統的複製選單。';
+  }
+});
+document.getElementById('select-install-prompt').addEventListener('click', () => {
+  selectPrompt(installPrompt);
+  installStatus.textContent = '已選取文字，請按 Ctrl+C（Mac：⌘C），或使用系統的複製選單。';
 });
 showHashTarget();
 </script></body></html>

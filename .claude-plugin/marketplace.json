@@ -1,0 +1,26 @@
+{
+  "name": "pw-skills-team",
+  "owner": {
+    "name": "NETCOM2025"
+  },
+  "description": "團隊工作技能安裝目錄。技能內容從 NETCOM2025/PW-Skills 私有 repo 取得。",
+  "plugins": [
+    {
+      "name": "pw-skills",
+      "displayName": "PW-Skills 團隊技能",
+      "description": "六個數位行銷、內容翻譯與 WordPress 維護技能。安裝需有私有來源 repo 的讀取權限。",
+      "source": {
+        "source": "github",
+        "repo": "NETCOM2025/PW-Skills"
+      },
+      "skills": [
+        "./skills/translation-zh-cn/portwell-cn-b2b-translation",
+        "./skills/translation-zh-cn/portwell-cn-solution-translation",
+        "./skills/translation-zh-cn/portwell-cn-article-import",
+        "./skills/wordpress/wp-takeover",
+        "./skills/wordpress/wp-plugin-update",
+        "./skills/wordpress/wp-pgp-mail-test"
+      ]
+    }
+  ]
+}
