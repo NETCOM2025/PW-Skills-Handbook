@@ -1,11 +1,33 @@
 <!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="PW-Skills 數位行銷部使用手冊：內容翻譯、網站維護與可直接複製的 AI 工作指令。"><title>PW-Skills｜數位行銷部使用手冊</title><style>
 :root{color-scheme:light;--ink:#182d3d;--muted:#506575;--line:#d6e1e7;--accent:#006b66;--bg:#f4f7f8}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.75}a{color:#005c8b;text-underline-offset:3px}a:hover{color:var(--accent)}:focus-visible{outline:3px solid #c65b14;outline-offset:4px}[hidden]{display:none!important}.skip{position:absolute;top:-100px;left:12px;background:white;padding:12px;z-index:10}.skip:focus{top:12px}.wrap{max-width:1180px;margin:auto;padding:0 28px}header{background:#153b4b;color:white;padding:48px 0 38px}header p{max-width:750px;color:#d6e7ed}.eyebrow{font-size:.85rem;letter-spacing:.12em;color:#a9ded7}h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.25;margin:10px 0 16px}h2{line-height:1.4;font-size:1.65rem}h3{line-height:1.5;font-size:1.25rem;margin:0 0 8px}h4{font-size:1rem;margin:18px 0 4px}p{margin:8px 0 16px}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:36px;padding-top:32px}aside nav{position:sticky;top:20px}nav a{display:block;padding:6px 0;font-size:.94rem}nav strong{display:block;margin-top:18px}section{margin-bottom:36px}.panel,.skill{background:white;border:1px solid var(--line);border-radius:14px;padding:26px;margin-bottom:22px}.notice{border-left:5px solid var(--accent);background:#eaf4f1;padding:16px 20px;border-radius:4px}.subtle{color:var(--muted);font-size:.92rem}.tag{display:inline-block;background:#e8f3f0;color:#00564f;padding:3px 10px;border-radius:20px;font-size:.8rem;margin-bottom:10px}.name{font-family:ui-monospace,monospace;font-size:.84rem;overflow-wrap:anywhere;color:var(--muted)}dl{margin:16px 0}dt{font-weight:700;margin-top:12px}dd{margin:3px 0 0}li{margin-bottom:7px}ul,ol{padding-left:24px}.filters{display:flex;gap:14px;flex-wrap:wrap;align-items:end}.filters label{display:block;font-weight:600}.filters div:first-child{flex:1;min-width:180px}input,select,button{font:inherit}input,select{padding:10px;border:1px solid #94aab7;border-radius:6px;background:white;color:var(--ink);width:100%}button{cursor:pointer;border:1px solid #78939f;background:#fff;color:var(--ink);border-radius:6px;padding:7px 12px}button:hover{background:#eaf4f1}.copy{background:var(--accent);color:white;border-color:var(--accent)}.copy:hover{background:#00514d}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}.prompt,pre{display:block;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;background:#f0f5f7;border:1px solid var(--line);padding:18px;border-radius:8px;font-family:ui-monospace,monospace;font-size:.9rem;line-height:1.65}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem}th,td{text-align:left;border-bottom:1px solid var(--line);padding:12px 10px;vertical-align:top}th{background:#edf3f5}code{font-family:ui-monospace,monospace;overflow-wrap:anywhere}details{margin-top:16px}summary{cursor:pointer;color:#005c8b;font-weight:600}details[open] summary{margin-bottom:12px}footer{border-top:1px solid var(--line);padding:24px 0;margin-top:30px}.status{min-height:1.8em;color:#00564f}.boundary{font-size:.94rem;border-left:3px solid #b47124;padding-left:14px}.count{margin:12px 0 0} @media(max-width:800px){.wrap{padding:0 18px}.layout{display:block}aside nav{position:static;display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:28px}nav strong{width:100%;margin-top:8px}nav a{padding:3px 0}.panel,.skill{padding:20px}header{padding:32px 0}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{header{background:white;color:black;padding:10px 0}header p{color:black}.layout{display:block}aside,.filters,.actions,.count,.status,.skip{display:none!important}.skill{break-inside:avoid}[hidden]{display:block!important}body{background:white}.wrap{padding:0;max-width:none}a{color:black}}
+
+.layout{display:block;padding-top:18px}
+#main-tabs{position:sticky;top:0;z-index:20;margin:0 0 24px;padding:6px 0;background:rgba(244,247,248,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.tab-list{display:flex;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;white-space:nowrap}
+.tab-list [role=tab]{display:block;flex:0 0 auto;padding:10px 15px;line-height:1.25;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);background:white;font-weight:650}
+.tab-list [role=tab][aria-selected=true]{background:#153b4b;color:white;border-color:#153b4b;box-shadow:inset 0 -3px 0 #9ad6ce}
+.tab-list [role=tab]:hover{background:#eaf4f1;color:var(--ink)}
+#main-tabs [aria-selected=true]:hover{background:#153b4b;color:white}
+.tab-panel{min-width:0}
+#skill-tabs{position:sticky;top:62px;z-index:15;margin:18px 0 0;padding:8px;background:#fff;border:1px solid var(--line);border-radius:12px 12px 0 0;box-shadow:0 4px 10px rgba(24,45,61,.05)}
+#skill-tabs [role=tab]{padding:7px 11px;border-radius:7px;font-size:.92rem}
+.skill{margin:0 0 22px;border-radius:0 0 14px 14px;border-top:0;scroll-margin-top:130px}
+#skills{margin-bottom:0}
+@media(max-width:800px){.wrap{padding:0 18px}.layout{display:block}#main-tabs{margin:0 -18px 18px;padding:8px 18px}.tab-list [role=tab]{padding:9px 12px}.panel,.skill{padding:20px}header{padding:32px 0}#skill-tabs{top:56px}}
+@media(max-width:480px){#main-tabs [role=tab]{font-size:.9rem;padding:9px 10px}#skill-tabs{top:56px}}
+@media print{#main-tabs,#skill-tabs{display:none!important}.tab-panel{display:block!important}}
 </style></head>
 <body><a class="skip" href="#main">跳到主要內容</a>
-<header><div class="wrap"><div class="eyebrow">PW-SKILLS · 數位行銷部使用手冊</div><h1>找到合適的技能，讓 AI 協助工作。</h1><p>給數位行銷部同仁的工作指引。從翻譯文案到網站問題處理，選擇你要做的工作、準備資料，再複製範例交給 AI。</p><div>離線可讀 · 不需伺服器 · 摘要核對日期：2026-10-06</div></div></header>
-<div class="wrap layout"><aside><nav aria-label="手冊導覽"><a href="#start">第一次使用</a><a href="#choose">找出適合的技能</a><strong>中國站內容翻譯</strong><a href="#portwell-cn-b2b-translation">翻譯英文文案</a><a href="#portwell-cn-solution-translation">翻譯解決方案頁面</a><a href="#portwell-cn-article-import">新增中國站文章</a><strong>網站維護與問題處理</strong><a href="#wp-takeover">了解網站現況</a><a href="#wp-plugin-update">安排外掛更新</a><a href="#wp-pgp-mail-test">檢查加密郵件</a><strong>持續使用</strong><a href="#update">取得新版手冊</a><a href="#sources">協助窗口與原始文件</a></nav></aside>
+<header><div class="wrap"><div class="eyebrow">PW-SKILLS · 數位行銷部使用手冊</div><h1>找到合適的技能，讓 AI 協助工作。</h1><p>給數位行銷部同仁的工作指引。從翻譯文案到網站問題處理，選擇你要做的工作、準備資料，再複製範例交給 AI。</p><div>離線可讀 · 不需伺服器 · 摘要核對日期：2026-10-06 · 外掛更新指引補充：2026-10-15</div></div></header>
+<div class="wrap layout"><nav id="main-tabs" class="tab-list main-tabs" role="tablist" aria-label="手冊主頁籤" aria-orientation="horizontal">
+<a href="#guide-panel" role="tab" id="guide-tab" aria-controls="guide-panel" aria-selected="true">快速開始</a>
+<a href="#skills-panel" role="tab" id="skills-tab" aria-controls="skills-panel" aria-selected="false">技能說明</a>
+<a href="#update-panel" role="tab" id="update-tab" aria-controls="update-panel" aria-selected="false">安裝與更新</a>
+<a href="#sources-panel" role="tab" id="sources-tab" aria-controls="sources-panel" aria-selected="false">協助與文件</a>
+</nav>
 <main id="main">
+<section class="tab-panel" id="guide-panel" role="tabpanel" aria-labelledby="guide-tab" tabindex="0">
 <section id="start"><h2>第一次使用，從這裡開始</h2>
 <div class="notice"><strong>技能（skill）是一份給 AI 的工作規範。</strong><br>它告訴 AI 如何處理特定工作、檢查哪些項目，以及哪些操作要先取得同意。你可以用一般文字交代需求，不需要寫程式。</div>
 <div class="panel"><ol>
@@ -20,9 +42,22 @@
 <div class="table-wrap"><table><caption>本庫 README 列出的安裝位置</caption><thead><tr><th scope="col">工具</th><th scope="col">供這台電腦的使用者使用</th><th scope="col">只在指定專案使用</th></tr></thead><tbody><tr><th scope="row">Codex</th><td><code>~/.agents/skills/&lt;skill-name&gt;/</code></td><td><code>&lt;project&gt;/.agents/skills/&lt;skill-name&gt;/</code></td></tr><tr><th scope="row">Claude Code</th><td><code>~/.claude/skills/&lt;skill-name&gt;/</code></td><td><code>&lt;project&gt;/.claude/skills/&lt;skill-name&gt;/</code></td></tr></tbody></table></div>
 <p>一般檔案複製可用於 macOS／Linux／Windows。不需另裝 plugin 或 MCP server；網站操作所需的工具與權限仍由目標專案準備。安裝後開新對話並確認載入。</p></details></div></section>
 <section id="choose"><h2>你現在想做什麼？</h2><div class="panel table-wrap"><table><thead><tr><th scope="col">這次要做什麼</th><th scope="col">選用技能</th></tr></thead><tbody><tr><td>將英文行銷內容翻成簡體中文，或更新既有草稿</td><td><a href="#portwell-cn-b2b-translation">英文內容翻譯</a></td></tr><tr><td>翻譯既有解決方案頁面與文章卡片</td><td><a href="#portwell-cn-solution-translation">解決方案頁面翻譯</a> ＋ 英文內容翻譯</td></tr><tr><td>將國際站文章新增到中國站</td><td><a href="#portwell-cn-article-import">新增文章</a> ＋ 英文內容翻譯</td></tr><tr><td>接手網站、規劃搬遷，或網站畫面異常</td><td><a href="#wp-takeover">網站現況盤點</a></td></tr><tr><td>安排網站外掛更新，並確認重要頁面與功能</td><td><a href="#wp-plugin-update">外掛更新</a> ＋ 網站現況盤點</td></tr><tr><td>表單通知收不到、解密亂碼，或圖片連結有問題</td><td><a href="#wp-pgp-mail-test">加密郵件檢查</a></td></tr></tbody></table></div>
-<div class="panel" id="filter-panel" hidden><div class="filters"><div><label for="search">搜尋技能說明</label><input id="search" type="search" placeholder="例如：草稿、表單、圖片" autocomplete="off"></div><div><label for="category">分類</label><select id="category"><option value="all">全部技能</option><option value="translation-zh-cn">中國站內容翻譯</option><option value="wordpress">網站維護與問題處理</option></select></div><button id="reset" type="button">清除篩選</button></div><p class="count" id="count" role="status" aria-live="polite">顯示 6 / 6 個技能</p></div><noscript><p>互動功能未啟用，仍可閱讀所有內容。請使用瀏覽器的尋找功能，並手動選取工作指令複製。</p></noscript></section>
-<section id="skills" aria-label="六個技能使用說明"><p id="empty" hidden>沒有符合的技能。請縮短關鍵字或清除篩選。</p>
-<article class="skill" id="portwell-cn-b2b-translation" data-category="translation-zh-cn">
+<noscript><p>互動功能未啟用時，所有內容仍會顯示；頁籤可作為頁內索引，工作指令可手動選取複製。</p></noscript></section>
+</section>
+<section class="tab-panel" id="skills-panel" role="tabpanel" aria-labelledby="skills-tab" tabindex="0">
+<section id="skills" aria-label="六個技能使用說明">
+<h2>技能使用說明</h2><p class="subtle">選擇技能頁籤查看適用情境、所需資料與工作指令；一次顯示一項技能。</p>
+<div class="panel" id="filter-panel" hidden><div class="filters"><div><label for="search">搜尋技能說明</label><input id="search" type="search" placeholder="例如：草稿、表單、圖片" autocomplete="off"></div><div><label for="category">分類</label><select id="category"><option value="all">全部技能</option><option value="translation-zh-cn">中國站內容翻譯</option><option value="wordpress">網站維護與問題處理</option></select></div><button id="reset" type="button">清除篩選</button></div><p class="count" id="count" role="status" aria-live="polite">顯示 6 / 6 個技能</p></div>
+<nav id="skill-tabs" class="tab-list skill-tabs" role="tablist" aria-label="選擇技能" aria-orientation="horizontal">
+<a href="#portwell-cn-b2b-translation" role="tab" id="skill-tab-portwell-cn-b2b-translation" aria-controls="portwell-cn-b2b-translation" aria-selected="true">英文內容翻譯</a>
+<a href="#portwell-cn-solution-translation" role="tab" id="skill-tab-portwell-cn-solution-translation" aria-controls="portwell-cn-solution-translation" aria-selected="false">解決方案頁面</a>
+<a href="#portwell-cn-article-import" role="tab" id="skill-tab-portwell-cn-article-import" aria-controls="portwell-cn-article-import" aria-selected="false">新增中國站文章</a>
+<a href="#wp-takeover" role="tab" id="skill-tab-wp-takeover" aria-controls="wp-takeover" aria-selected="false">網站現況盤點</a>
+<a href="#wp-plugin-update" role="tab" id="skill-tab-wp-plugin-update" aria-controls="wp-plugin-update" aria-selected="false">外掛更新</a>
+<a href="#wp-pgp-mail-test" role="tab" id="skill-tab-wp-pgp-mail-test" aria-controls="wp-pgp-mail-test" aria-selected="false">加密郵件</a>
+</nav>
+<p id="empty" hidden>沒有符合的技能。請縮短關鍵字或清除篩選。</p>
+<article class="skill" id="portwell-cn-b2b-translation" data-category="translation-zh-cn" role="tabpanel" aria-labelledby="skill-tab-portwell-cn-b2b-translation" tabindex="0">
 <span class="tag">中國站內容翻譯</span><h3>把英文內容翻成中國市場用語</h3><div class="name">技能名稱：portwell-cn-b2b-translation</div>
 <p>把新聞、產品介紹、展會報導等英文內容，整理成自然、專業的簡體中文，並保留原文的產品規格與事實。</p><dl>
 <dt>什麼時候用</dt><dd>你已經有英文原文，要準備中國站的文案；或中國站已有草稿，只需要翻譯內容。</dd>
@@ -42,7 +77,7 @@
 <div class="actions" hidden><button class="copy" type="button" data-prompt="prompt-portwell-cn-b2b-translation">複製工作指令</button><button class="select" type="button" data-prompt="prompt-portwell-cn-b2b-translation">選取文字</button></div><p class="status" aria-live="polite"></p>
 <details><summary>給網站管理人員：完整操作規範</summary><p>技術檢查、備份與復原，請依 <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/skills/translation-zh-cn/portwell-cn-b2b-translation/SKILL.md">portwell-cn-b2b-translation 原始說明</a> 及目標網站的管理規則執行。</p></details>
 </article>
-<article class="skill" id="portwell-cn-solution-translation" data-category="translation-zh-cn">
+<article class="skill" id="portwell-cn-solution-translation" data-category="translation-zh-cn" role="tabpanel" aria-labelledby="skill-tab-portwell-cn-solution-translation" tabindex="0">
 <span class="tag">中國站內容翻譯</span><h3>翻譯解決方案頁面</h3><div class="name">技能名稱：portwell-cn-solution-translation</div>
 <p>將國際站既有的解決方案（Solution）頁面，翻譯到中國站的對應頁面，包含標題、介紹、按鈕與文章卡片。</p><dl>
 <dt>什麼時候用</dt><dd>國際站與中國站都有對應的解決方案頁面，你希望更新中國站文字，同時保留原本的版面。</dd>
@@ -62,7 +97,7 @@
 <div class="actions" hidden><button class="copy" type="button" data-prompt="prompt-portwell-cn-solution-translation">複製工作指令</button><button class="select" type="button" data-prompt="prompt-portwell-cn-solution-translation">選取文字</button></div><p class="status" aria-live="polite"></p>
 <details><summary>給網站管理人員：完整操作規範</summary><p>技術檢查、備份與復原，請依 <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/skills/translation-zh-cn/portwell-cn-solution-translation/SKILL.md">portwell-cn-solution-translation 原始說明</a> 及目標網站的管理規則執行。</p></details>
 </article>
-<article class="skill" id="portwell-cn-article-import" data-category="translation-zh-cn">
+<article class="skill" id="portwell-cn-article-import" data-category="translation-zh-cn" role="tabpanel" aria-labelledby="skill-tab-portwell-cn-article-import" tabindex="0">
 <span class="tag">中國站內容翻譯</span><h3>新增中國站文章</h3><div class="name">技能名稱：portwell-cn-article-import</div>
 <p>把國際站已發布的新聞、應用文章或成功案例，翻譯成簡體中文，並依同意的範圍建立到中國站。</p><dl>
 <dt>什麼時候用</dt><dd>你希望中國站也有這篇文章，而且已查明中國站沒有相同或對應的文章。</dd>
@@ -82,7 +117,7 @@
 <div class="actions" hidden><button class="copy" type="button" data-prompt="prompt-portwell-cn-article-import">複製工作指令</button><button class="select" type="button" data-prompt="prompt-portwell-cn-article-import">選取文字</button></div><p class="status" aria-live="polite"></p>
 <details><summary>給網站管理人員：完整操作規範</summary><p>技術檢查、備份與復原，請依 <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/skills/translation-zh-cn/portwell-cn-article-import/SKILL.md">portwell-cn-article-import 原始說明</a> 及目標網站的管理規則執行。</p></details>
 </article>
-<article class="skill" id="wp-takeover" data-category="wordpress">
+<article class="skill" id="wp-takeover" data-category="wordpress" role="tabpanel" aria-labelledby="skill-tab-wp-takeover" tabindex="0">
 <span class="tag">網站維護與問題處理</span><h3>了解網站現況與問題</h3><div class="name">技能名稱：wp-takeover</div>
 <p>接手網站或遇到問題時，先整理「網站實際在哪裡運作、有哪些設定、風險在哪裡」，讓後續處理有依據。</p><dl>
 <dt>什麼時候用</dt><dd>接手新網站、規劃網站搬遷，或網站畫面異常、管理工具卻顯示正常。更新外掛前，也需要先確認操作的是正確網站。</dd>
@@ -102,28 +137,28 @@
 <div class="actions" hidden><button class="copy" type="button" data-prompt="prompt-wp-takeover">複製工作指令</button><button class="select" type="button" data-prompt="prompt-wp-takeover">選取文字</button></div><p class="status" aria-live="polite"></p>
 <details><summary>給網站管理人員：完整操作規範</summary><p>技術檢查、備份與復原，請依 <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/skills/wordpress/wp-takeover/SKILL.md">wp-takeover 原始說明</a> 及目標網站的管理規則執行。</p></details>
 </article>
-<article class="skill" id="wp-plugin-update" data-category="wordpress">
-<span class="tag">網站維護與問題處理</span><h3>安排網站安排外掛更新</h3><div class="name">技能名稱：wp-plugin-update</div>
+<article class="skill" id="wp-plugin-update" data-category="wordpress" role="tabpanel" aria-labelledby="skill-tab-wp-plugin-update" tabindex="0">
+<span class="tag">網站維護與問題處理</span><h3>安排網站外掛更新</h3><div class="name">技能名稱：wp-plugin-update</div>
 <p>外掛是替 WordPress 增加功能的工具。這個技能協助管理人員安排更新、保留復原方式，並確認更新後網站仍能正常使用。</p><dl>
-<dt>什麼時候用</dt><dd>網站外掛需要更新，尤其涉及網頁編輯、購物或網站速度功能時；行銷同仁可提供重要頁面與功能，協助更新後檢查。</dd>
-<dt>哪些情況要改用別的方式</dt><dd>不是按一次就全部更新。若沒有可用備份、尚未確認正確網站，或更新範圍不清楚，應先完成準備。</dd>
-<dt>你要準備什麼</dt><dd>網站網址、希望更新的外掛名稱（不知道可先請管理人員列清單）、可安排的作業時間、重要頁面與功能，例如產品頁、詢價表單、手機版。備份、復原方式與操作權限由網站管理人員確認。</dd>
+<dt>什麼時候用</dt><dd>網站外掛需要更新，尤其涉及網頁編輯、購物、網站速度或付費授權產品時（例如 Yoast Premium、Elementor Pro、Jet 系列）；行銷同仁可提供重要頁面與功能，協助更新後檢查。</dd>
+<dt>哪些情況要改用別的方式</dt><dd>不是按一次就全部更新。若沒有可用備份、尚未確認正確網站，或更新範圍不清楚，應先完成準備。付費或授權外掛須逐項核對已安裝項目；更新清單沒有列出，不等於沒有更新。</dd>
+<dt>你要準備什麼</dt><dd>網站網址、希望更新的外掛名稱（不知道可先請管理人員列清單）、可能涉及的付費授權產品、可安排的作業時間，以及重要頁面與功能，例如產品頁、詢價表單、手機版。備份、復原方式與操作權限由網站管理人員確認。</dd>
 <dt>需要一起準備的技能</dt><dd>需一起準備「網站現況盤點」技能（wp-takeover），先確認操作的是正確網站。</dd>
-<dt>完成後會拿到什麼</dt><dd>更新報告：哪些外掛從哪個版本更新到哪個版本、哪些尚未完成、檢查了哪些頁面與功能，以及備份與復原方式。</dd>
-</dl><h4>完成後，請確認這幾件事</h4><ul><li>更新前是否有可用備份與復原方式？是否採分批更新，每批確認後才繼續？</li><li>更新後重要外掛是否仍在運作？首頁、產品頁、表單頁與手機版的文字、圖片、按鈕是否正常？</li><li>網站管理人員是否檢查排版檔案、網站暫存設定與不應暫存的頁面？不能只看「網址開得起來」。</li><li>若實際出現故障，是否先復原並確認網站恢復？如果只是工具無法連線，應列為尚未完成檢查，不直接認定更新失敗。</li></ul>
-<p class="boundary"><strong>操作前要先確認：</strong>同意更新外掛，不自動包含調整資料庫、重新產生排版檔案或清除網站暫存。這些動作要具體說明並確認範圍；工具拒絕操作時不得換方式繞過。</p>
-<h4>給 AI 的工作指令 · 複製後填入［你的資料］</h4><pre class="prompt" id="prompt-wp-plugin-update" tabindex="0" aria-label="安排網站安排外掛更新工作指令">請使用 wp-plugin-update，並先搭配 wp-takeover 確認網站現況。
+<dt>完成後會拿到什麼</dt><dd>更新報告：各外掛的更新前後版本、哪些尚未完成、檢查了哪些頁面與功能，以及備份與復原方式。付費授權外掛須逐項列出結果。</dd>
+</dl><h4>完成後，請確認這幾件事</h4><ul><li>更新前是否有可用備份與復原方式？是否採分批更新，每批確認後才繼續？</li><li>更新後重要外掛是否仍在運作？首頁、產品頁、表單頁與手機版的文字、圖片、按鈕是否正常？</li><li>如有 Yoast Premium、Elementor Pro 或 Jet 系列，是否逐項確認已安裝的外掛及其官方更新結果？</li><li>網站管理人員是否檢查排版檔案、網站暫存設定與不應暫存的頁面？不能只看「網址開得起來」。</li><li>若實際出現故障，是否先復原並確認網站恢復？如果只是工具無法連線，應列為尚未完成檢查，不直接認定更新失敗。</li></ul>
+<p class="boundary"><strong>操作前要先確認：</strong>同意更新外掛，不自動包含調整資料庫、重新產生排版檔案或清除網站暫存。這些動作要具體說明並確認範圍；授權外掛的更新來源須經管理人員核准，沒有可用套件時列為未完成，不改用非官方來源；工具拒絕操作時不得換方式繞過。</p>
+<h4>給 AI 的工作指令 · 複製後填入［你的資料］</h4><pre class="prompt" id="prompt-wp-plugin-update" tabindex="0" aria-label="安排網站外掛更新工作指令">請使用 wp-plugin-update，並先搭配 wp-takeover 確認網站現況。
 網站：［完整網址］
-希望更新的外掛：［名稱；不清楚則先列待更新清單供確認］
+希望更新的外掛：［名稱；不清楚則先列待更新清單供確認，並列出已安裝的付費／授權外掛］
 重要頁面與功能：［產品頁網址、詢價表單、手機版等］
 可安排時間／網站管理窗口：［補上資料］
 這次先提供更新清單、風險、備份與復原方案，不修改網站。
 更新若已核准，另填：我同意更新［指定外掛］。其他必要動作，例如清除網站暫存、重新產生排版檔案或調整資料庫，請先說明影響並確認。
-完成後提供更新報告與頁面、功能檢查結果，未完成項目請明列。</pre>
+逐一核對候選外掛與實際版本；付費／授權外掛的更新清單若未列出，也請確認官方版本與核准更新來源。完成後提供更新報告與頁面、功能檢查結果，未完成項目請明列。</pre>
 <div class="actions" hidden><button class="copy" type="button" data-prompt="prompt-wp-plugin-update">複製工作指令</button><button class="select" type="button" data-prompt="prompt-wp-plugin-update">選取文字</button></div><p class="status" aria-live="polite"></p>
 <details><summary>給網站管理人員：完整操作規範</summary><p>技術檢查、備份與復原，請依 <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/skills/wordpress/wp-plugin-update/SKILL.md">wp-plugin-update 原始說明</a> 及目標網站的管理規則執行。</p></details>
 </article>
-<article class="skill" id="wp-pgp-mail-test" data-category="wordpress">
+<article class="skill" id="wp-pgp-mail-test" data-category="wordpress" role="tabpanel" aria-labelledby="skill-tab-wp-pgp-mail-test" tabindex="0">
 <span class="tag">網站維護與問題處理</span><h3>檢查表單通知與加密郵件</h3><div class="name">技能名稱：wp-pgp-mail-test</div>
 <p>釐清詢價表單的通知信為什麼收不到、解密後出現亂碼，或郵件中的圖片連結無法使用。適用使用 OpenPGP 加密的通知流程。</p><dl>
 <dt>什麼時候用</dt><dd>客戶送出表單後沒有收到通知、收件人開啟加密郵件有問題，或需要確認中文與圖片連結是否正常。</dd>
@@ -144,49 +179,146 @@
 <details><summary>給網站管理人員：完整操作規範</summary><p>技術檢查、備份與復原，請依 <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/skills/wordpress/wp-pgp-mail-test/SKILL.md">wp-pgp-mail-test 原始說明</a> 及目標網站的管理規則執行。</p></details>
 </article>
 </section>
+</section>
+<section class="tab-panel" id="update-panel" role="tabpanel" aria-labelledby="update-tab" tabindex="0">
 <section id="update"><h2>有新版手冊時，怎麼更新？</h2><div class="panel"><ol><li>依團隊使用的 GitHub 同步方式，取得已審查的新版檔案。若電腦上的檔案自己改過，先請維護人員協助保留，不直接覆蓋。</li><li>重新開啟新版 <code>index.html</code>。如果先前另存過一份，請確認開啟的是這次更新的檔案。</li><li>請工具設定人員確認：AI 工具中的技能是否也已更新。手冊更新了，不代表工具內的技能也跟著更新。</li><li>開始新的對話，再確認需要的技能可以使用。</li></ol>
 <details><summary>給維護人員：版本同步與手冊維護</summary><p>確認本庫沒有未處理的本機修改後，使用 <code>git pull --ff-only</code> 同步。複製安裝的技能須另行比對、備份並更新；如使用工具支援的 symlink，應連到已審查版本。</p><p>SKILL.md 是操作規範正本；此手冊為人工維護的使用說明。技能名稱、適用情境、搭配技能、所需資料、成果、檢查項目或操作授權改動時，同步更新手冊、README 與必要交接紀錄。維持台灣繁體中文與非技術同仁能理解的文字，技術細節放入管理人員說明。新增或移除技能時同步導覽與情境表；檢查原始文件連結、本機開啟、搜尋分類與指令複製功能。</p></details></div></section>
+</section>
+<section class="tab-panel" id="sources-panel" role="tabpanel" aria-labelledby="sources-tab" tabindex="0">
 <section id="sources"><h2>需要進一步協助時</h2><p>使用方式與工作範圍，請找部門的技能維護窗口；工具設定、網站權限與備份，請找 AI 工具設定人員或網站管理人員。正式網站是客戶與外部讀者正在使用的網站，修改前請確認影響範圍。</p><p>這份手冊整理自六份技能原始說明。它的檢查範圍是本機閱讀與操作功能，不代表每位同仁都已取得網站權限，也不代表所有流程都已在正式網站測試。</p><details><summary>給維護人員：原始文件與交接紀錄</summary><p><a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/README.md">安裝與維護說明</a> · <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/docs/inventory.md">技能來源盤點</a> · <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/docs/handoff.md">交接紀錄</a> · <a href="https://github.com/NETCOM2025/PW-Skills/blob/6476af803982f06bbcd3a58299ee5cbb058066df/AGENTS.md">本庫維護規則</a></p><p>完整技術步驟以對應 SKILL.md 與目標專案規則為準；不把歷史案例當成目前網站的診斷結果，也不修改同仁的既有技能安裝副本。</p></details></section>
+</section>
 <footer><p class="subtle">PW-Skills · 數位行銷部使用手冊。可離線閱讀，不需要安裝額外套件。<a href="#main">回到主要內容</a></p></footer>
 </main></div>
 <script>
 'use strict';
 const cards = [...document.querySelectorAll('.skill')];
+const mainTablist = document.getElementById('main-tabs');
+const skillTablist = document.getElementById('skill-tabs');
+const mainTabs = [...mainTablist.querySelectorAll('[role="tab"]')];
+const skillTabs = [...skillTablist.querySelectorAll('[role="tab"]')];
 const search = document.getElementById('search');
 const category = document.getElementById('category');
+const skillCount = document.getElementById('count');
+const emptyMessage = document.getElementById('empty');
+let activeSkillId = cards[0]?.id || '';
+
+function writeHash(hash) {
+  if (hash && location.hash !== hash) history.pushState(null, '', hash);
+}
+function activateMainTab(tab, updateUrl = true) {
+  mainTabs.forEach(item => {
+    const selected = item === tab;
+    item.setAttribute('aria-selected', String(selected));
+    item.tabIndex = selected ? 0 : -1;
+    document.getElementById(item.getAttribute('aria-controls')).hidden = !selected;
+  });
+  if (updateUrl) writeHash(tab.hash);
+}
 function filterCards() {
   const terms = search.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-  let visible = 0;
-  cards.forEach(card => {
-    const text = card.textContent.toLocaleLowerCase();
-    card.hidden = !(category.value === 'all' || card.dataset.category === category.value) || !terms.every(term => text.includes(term));
-    if (!card.hidden) visible++;
+  const visibleCards = cards.filter(card => {
+    const categoryMatches = category.value === 'all' || card.dataset.category === category.value;
+    const searchText = card.textContent.toLocaleLowerCase();
+    return categoryMatches && terms.every(term => searchText.includes(term));
   });
-  document.getElementById('count').textContent = `顯示 ${visible} / ${cards.length} 個技能`;
-  document.getElementById('empty').hidden = visible !== 0;
+  const visibleIds = new Set(visibleCards.map(card => card.id));
+  if (!visibleIds.has(activeSkillId)) activeSkillId = visibleCards[0]?.id || '';
+  skillTabs.forEach(tab => {
+    const id = tab.hash.slice(1);
+    const isVisible = visibleIds.has(id);
+    const selected = isVisible && id === activeSkillId;
+    tab.hidden = !isVisible;
+    tab.setAttribute('aria-selected', String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+  });
+  cards.forEach(card => {
+    card.hidden = !visibleIds.has(card.id) || card.id !== activeSkillId;
+  });
+  skillCount.textContent = `顯示 ${visibleCards.length} / ${cards.length} 個技能`;
+  emptyMessage.hidden = visibleCards.length > 0;
 }
-function clearFilters() {search.value = ''; category.value = 'all'; filterCards();}
-function revealHash() {
+function clearFilters() {
+  search.value = '';
+  category.value = 'all';
+  filterCards();
+}
+function activateSkillTab(tab, updateUrl = true) {
+  if (tab.hidden) clearFilters();
+  activeSkillId = tab.hash.slice(1);
+  const skillMainTab = mainTabs.find(item => item.getAttribute('aria-controls') === 'skills-panel');
+  activateMainTab(skillMainTab, false);
+  filterCards();
+  if (updateUrl) writeHash(tab.hash);
+}
+function setupTablist(list, tabs, activate) {
+  list.addEventListener('click', event => {
+    const tab = event.target.closest('[role="tab"]');
+    if (!tab || !tabs.includes(tab)) return;
+    event.preventDefault();
+    activate(tab, true);
+  });
+  list.addEventListener('keydown', event => {
+    const movement = {ArrowRight: 1, ArrowLeft: -1, Home: 'first', End: 'last'}[event.key];
+    if (movement === undefined) return;
+    const available = tabs.filter(tab => !tab.hidden);
+    const current = available.indexOf(document.activeElement);
+    if (!available.length) return;
+    event.preventDefault();
+    const nextIndex = movement === 'first' ? 0
+      : movement === 'last' ? available.length - 1
+      : (current + movement + available.length) % available.length;
+    const next = available[nextIndex];
+    next.focus();
+    activate(next, true);
+  });
+}
+function showHashTarget() {
   const id = decodeURIComponent(location.hash.slice(1));
-  const target = document.getElementById(id);
-  if (target && target.classList.contains('skill') && target.hidden) {
-    clearFilters(); target.scrollIntoView();
+  const skillTab = skillTabs.find(tab => tab.hash.slice(1) === id);
+  if (skillTab) {
+    clearFilters();
+    activeSkillId = id;
+    activateSkillTab(skillTab, false);
+    return;
   }
+  const sectionToTab = {
+    'guide-panel': 'guide-tab', start: 'guide-tab', choose: 'guide-tab',
+    'skills-panel': 'skills-tab', skills: 'skills-tab',
+    'update-panel': 'update-tab', update: 'update-tab',
+    'sources-panel': 'sources-tab', sources: 'sources-tab'
+  };
+  const tab = mainTabs.find(item => item.id === sectionToTab[id]);
+  if (tab) activateMainTab(tab, false);
 }
 function selectPrompt(pre) {
   pre.focus();
-  const range = document.createRange(); range.selectNodeContents(pre);
-  const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+  const range = document.createRange();
+  range.selectNodeContents(pre);
+  const selection = window.getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
 }
+
 document.getElementById('filter-panel').hidden = false;
+activateMainTab(mainTabs.find(tab => tab.getAttribute('aria-selected') === 'true') || mainTabs[0], false);
+filterCards();
+setupTablist(mainTablist, mainTabs, activateMainTab);
+setupTablist(skillTablist, skillTabs, activateSkillTab);
 search.addEventListener('input', filterCards);
 category.addEventListener('change', filterCards);
 document.getElementById('reset').addEventListener('click', () => {clearFilters(); search.focus();});
-window.addEventListener('hashchange', revealHash);
-document.querySelectorAll('nav a, #choose a').forEach(link => link.addEventListener('click', () => {
-  const target = document.getElementById(link.hash.slice(1));
-  if (target && target.classList.contains('skill') && target.hidden) clearFilters();
-}));
+document.querySelectorAll('#choose a[href^="#"]').forEach(link => {
+  link.addEventListener('click', event => {
+    const tab = skillTabs.find(item => item.hash === link.hash);
+    if (!tab) return;
+    event.preventDefault();
+    clearFilters();
+    activateSkillTab(tab, true);
+  });
+});
+window.addEventListener('hashchange', showHashTarget);
+window.addEventListener('popstate', showHashTarget);
+
 cards.forEach(card => {
   card.querySelector('.actions').hidden = false;
   const status = card.querySelector('.status');
@@ -206,5 +338,5 @@ cards.forEach(card => {
     status.textContent = '已選取文字，請按 Ctrl+C（Mac：⌘C），或使用系統的複製選單。';
   });
 });
-revealHash();
+showHashTarget();
 </script></body></html>
